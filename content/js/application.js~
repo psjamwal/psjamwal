@@ -1,0 +1,19 @@
+var app = app || {};
+
+app.headerInit = function() {
+    var toggleNavBars = function() {
+	  $('ul.toggle').slideToggle(600);
+        },
+	fixHeaderOnScroll = function() {
+          
+            if ($(window).scrollTop() > 0) {
+              $('#header_outer').addClass('fixed');
+            }
+            else {
+              $('#header_outer').removeClass('fixed');
+            }
+	};
+    
+  $('.res-nav_click').click(toggleNavBars);
+$(window).bind('scroll', function() {
+};
